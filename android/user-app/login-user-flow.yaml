@@ -1,0 +1,23 @@
+appId: com.nham24.nham24_dev
+---
+# - launchApp
+
+- runScript: /Users/earchamrong/samples/android/user-app/login.js
+- tapOn:
+    text: ${output.login.loginBtn}
+- tapOn:
+    text: ${output.login.phoneNumberfield}
+- inputText: ${output.login.phoneNumber}
+- tapOn:
+    text: ${output.login.passWordfield}
+- runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+- inputText: ${output.login.password}
+- hideKeyboard
+- runScript: /Users/earchamrong/samples/android/user-app/login.js
+- assertVisible:
+    text: ${output.login.loginBtn}
+    index: 1
+    enabled: true
+- tapOn:
+    text: ${output.login.loginBtn}
+    index: 1
