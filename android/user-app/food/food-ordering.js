@@ -1,0 +1,17 @@
+output.foodordering = {
+  food: "Food",
+  shop: "Barista Coffee 001",
+  item: "2. Hot Americano / អាមេរិកកាណូ",
+  add_to_card: "Add To Cart  | $ 1.38",
+  choose_sugar: ", Sugar 0% + $0",
+  add_to_card2: "Add To Cart  | $ 1.38",
+  order_nowBtn: "ORDER NOW",
+  select_address: "Street 273, Khan Toul Kork, Phnom Penh, 1205, Cambodia",
+  proceed_to_payBtn: "PROCEED TO PAY",
+  cash_on_delivery: "Cash on Delivery",
+  wallet: "Wallet",
+  place_the_order_nowBtn: "PLACE THE ORDER NOW",
+  discount: "Discount",
+  priceDC: "- $ 0.69",
+  priceST: "$ 1.38",
+};

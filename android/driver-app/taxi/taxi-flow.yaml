@@ -1,0 +1,56 @@
+appId: com.nham24.nham24driver_dev
+---
+# - launchApp
+
+#---------------------------------------------------------------------------------------------
+# Log in
+#---------------------------------------------------------------------------------------------
+- runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+- tapOn:
+    text: ${output.login.phoneNumberfield}
+- runScript: /Users/earchamrong/samples/android/driver-app/taxi/login.js
+- inputText: ${output.login.phoneNumber}
+- runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+- tapOn:
+    text: ${output.login.passWordfield}
+- inputText: ${output.login.password}
+- hideKeyboard
+- tapOn:
+    text: ${output.login.loginBtn}
+
+#---------------------------------------------------------------------------------------------
+# Process taxi destination later with cash
+#---------------------------------------------------------------------------------------------
+- runScript: /Users/earchamrong/samples/android/driver-app/food/taxi-food.js
+- extendedWaitUntil:
+    visible: ${output.taxiFood.acceptBtn}
+    timeout: 10000
+- tapOn:
+    text: ${output.taxiFood.acceptBtn}
+- runScript: /Users/earchamrong/samples/android/driver-app/taxi/taxi.js
+- assertVisible:
+    text: ${output.taxi.arrive}
+- swipe:
+    start: 15%, 90%
+    end: 90%, 90%
+    duration: 2000
+- assertVisible:
+    text: ${output.taxi.startTrip}
+- swipe:
+    start: 15%, 90%
+    end: 90%, 90%
+    duration: 2000
+- assertVisible:
+    text: ${output.taxi.onGoingTrip}
+- swipe:
+    start: 15%, 90%
+    end: 90%, 90%
+    duration: 2000
+- assertVisible:
+    text: ${output.taxi.endTripBtn}
+- tapOn:
+    text: ${output.taxi.endTripBtn}
+- tapOn:
+    text: ${output.taxi.collectBtn}
+- tapOn:
+    text: ${output.taxi.okBtn}

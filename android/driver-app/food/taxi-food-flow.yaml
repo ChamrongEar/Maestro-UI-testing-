@@ -1,0 +1,55 @@
+appId: com.nham24.nham24driver_dev
+---
+# - launchApp
+
+#-----------------------------------------------------------------------------------------------
+# Login 
+#-----------------------------------------------------------------------------------------------
+# - runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+# - tapOn:
+#     text: ${output.login.phoneNumberfield}
+# - inputText: ${output.login.phoneNumber}
+# - tapOn:
+#     text: ${output.login.passWordfield}
+# - inputText: ${output.login.password}
+# - hideKeyboard
+# - tapOn:
+#     text: ${output.login.loginBtn}
+
+#-----------------------------------------------------------------------------------------------
+# Process taxi food 
+#-----------------------------------------------------------------------------------------------
+- runScript: /Users/earchamrong/samples/android/driver-app/food/taxi-food.js
+- extendedWaitUntil:
+    visible: ${output.taxiFood.acceptBtn}
+    timeout: 10000      # Timeout in milliseconds
+- tapOn:
+    text: ${output.taxiFood.acceptBtn}      
+- assertVisible:
+    text: ${output.taxiFood.arrivestore}
+- swipe:
+    start: 15%, 92%
+    end: 90%, 92%
+    duration: 2000
+- assertVisible:
+    text: ${output.taxiFood.receivingitem}
+- swipe:
+    start: 15%, 92%
+    end: 90%, 92%
+    duration: 2000
+- tapOn:
+    text: ${output.taxiFood.skipBtn}
+- tapOn:
+    text: ${output.taxiFood.notiftarriveBtn}
+- assertVisible:
+    text: ${output.taxiFood.completeorder}
+- swipe:
+    start: 15%, 92%
+    end: 90%, 92%
+    duration: 2000
+- tapOn:
+    text: ${output.taxiFood.okBtn}
+- tapOn:
+    point: "72%,57%"
+- tapOn:
+    text: ${output.taxiFood.submitBtn}  

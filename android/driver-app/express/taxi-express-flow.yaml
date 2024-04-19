@@ -1,0 +1,19 @@
+appId: com.nham24.nham24driver_dev
+---
+# - launchApp
+
+#-----------------------------------------------------------------------------------------------
+# Login 
+#-----------------------------------------------------------------------------------------------
+- runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+- tapOn:
+    text: ${output.login.phoneNumberfield}
+- runScript: /Users/earchamrong/samples/android/driver-app/express/login.js
+- inputText: ${output.login.phoneNumber}
+- runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+- tapOn:
+    text: ${output.login.passWordfield}
+- inputText: ${output.login.password}
+- hideKeyboard
+- tapOn:
+    text: ${output.login.loginBtn}
