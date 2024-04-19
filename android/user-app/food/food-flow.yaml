@@ -4,25 +4,25 @@ appId: com.nham24.nham24_dev
 #----------------------------------------------------------------------
 # # - Log in
 #----------------------------------------------------------------------
-- runScript: /Users/earchamrong/samples/android/user-app/food/login.js
-- tapOn:
-    text: ${output.login.loginBtn}
-- tapOn:
-    text: ${output.login.phoneNumberfield}
-- inputText: ${output.login.phoneNumber}
-- tapOn:
-    text: ${output.login.passWordfield}
-- runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
-- inputText: ${output.login.password}
-- hideKeyboard
-- runScript: /Users/earchamrong/samples/android/user-app/food/login.js
-- assertVisible:
-    text: ${output.login.loginBtn}
-    index: 1
-    enabled: true
-- tapOn:
-    text: ${output.login.loginBtn}
-    index: 1
+# - runScript: /Users/earchamrong/samples/android/user-app/food/login.js
+# - tapOn:
+#     text: ${output.login.loginBtn}
+# - tapOn:
+#     text: ${output.login.phoneNumberfield}
+# - inputText: ${output.login.phoneNumber}
+# - tapOn:
+#     text: ${output.login.passWordfield}
+# - runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+# - inputText: ${output.login.password}
+# - hideKeyboard
+# - runScript: /Users/earchamrong/samples/android/user-app/food/login.js
+# - assertVisible:
+#     text: ${output.login.loginBtn}
+#     index: 1
+#     enabled: true
+# - tapOn:
+#     text: ${output.login.loginBtn}
+#     index: 1
 
 #----------------------------------------------------------------------
 # - order food
@@ -74,31 +74,35 @@ appId: com.nham24.nham24_dev
 #-------------------------------------------------------------
 # RE-ORDER
 #-------------------------------------------------------------
-# - runScript: /Users/earchamrong/samples/android/food/reorder.js
+- runScript: /Users/earchamrong/samples/android/user-app/food/reorder.js
 # - tapOn:
 #     text: ${output.reorder.history}
+- scrollUntilVisible:
+    element:
+      text: ${output.reorder.delivered} # or any other selector
+    direction: DOWN
+- tapOn:
+    text: ${output.reorder.delivered}
+    index: 0
+- scroll
+- tapOn: 
+    text: ${output.reorder.re_order}
+- runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
+- assertVisible:
+    text: ${output.foodordering.proceed_to_payBtn}
+    enabled: true
+- tapOn:
+    text: ${output.foodordering.proceed_to_payBtn}
+- scrollUntilVisible:
+    element:
+      text: ${output.foodordering.wallet} # or any other selector
+    direction: DOWN
 # - tapOn:
-#     text: ${output.reorder.delivered}
-#     index: 0
-# - scroll
-# - tapOn: 
-#     text: ${output.reorder.re_order}
-# - runScript: /Users/earchamrong/samples/android/food/food-ordering.js
-# - assertVisible:
-#     text: ${output.foodordering.proceed_to_payBtn}
-#     enabled: true
-# - tapOn:
-#     text: ${output.foodordering.proceed_to_payBtn}
-# - scrollUntilVisible:
-#     element:
-#       text: ${output.foodordering.wallet} # or any other selector
-#     direction: DOWN
-# # - tapOn:
-# #     text: ${output.foodordering.cash_on_delivery}
-# - tapOn:
-#     text: ${output.foodordering.wallet}
-# - assertVisible:
-#     text: ${output.foodordering.place_the_order_nowBtn}
-#     enabled: true
-# - tapOn:
-#     text: ${output.foodordering.place_the_order_nowBtn}
+#     text: ${output.foodordering.cash_on_delivery}
+- tapOn:
+    text: ${output.foodordering.wallet}
+- assertVisible:
+    text: ${output.foodordering.place_the_order_nowBtn}
+    enabled: true
+- tapOn:
+    text: ${output.foodordering.place_the_order_nowBtn}

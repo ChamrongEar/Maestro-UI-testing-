@@ -1,0 +1,46 @@
+appId: com.nham24.nham24_dev
+---
+# - launchApp
+- runScript: /Users/earchamrong/samples/android/user-app/taxi/booking-taxi.js
+
+#----------------------------------------------------------------------
+# - Booking taxi pay with cash on just go
+#----------------------------------------------------------------------
+# - tapOn:
+#     text: ${output.bookingTaxi.service}
+# - tapOn:
+#     text: ${output.bookingTaxi.whereTo}
+# - tapOn:
+#     text: ${output.bookingTaxi.address}
+# - tapOn:
+#     text: ${output.bookingTaxi.confirmDestinationBtn}             # in case confirm geofence
+# - tapOn:
+#     text: ${output.bookingTaxi.selectVehicle}
+# - extendedWaitUntil:
+#     visible: ${output.bookingTaxi.bookNowBtn}
+#     timeout: 5000 
+# - tapOn:
+#     text: ${output.bookingTaxi.bookNowBtn}
+
+#----------------------------------------------------------------------
+# - Booking taxi pay with cash on specific vehicle (search address)
+#----------------------------------------------------------------------
+- tapOn:
+    text: ${output.bookingTaxi.service}
+- tapOn:
+    text: ${output.bookingTaxi.whereTo}
+- tapOn:
+    text: ${output.bookingTaxi.searchbarAddress}
+- inputText: ${output.bookingTaxi.address1}
+- hideKeyboard
+- tapOn:
+    text: ${output.bookingTaxi.selectAddress}
+- tapOn:
+    text: ${output.bookingTaxi.confirmBtn}
+- tapOn:
+    point: "44%,74%"                               # The point is for pixel 6
+- extendedWaitUntil:
+    visible: ${output.bookingTaxi.bookNowBtn}
+    timeout: 5000 
+- tapOn:
+    text: ${output.bookingTaxi.bookNowBtn}
