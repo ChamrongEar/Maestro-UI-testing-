@@ -4,16 +4,18 @@ appId: com.nham24.nham24_dev
 #----------------------------------------------------------------------
 # # - Log in
 #----------------------------------------------------------------------
-- tapOn: "Login"
 - runScript: /Users/earchamrong/samples/android/user-app/food/login.js
+- tapOn:
+    text: ${output.login.loginBtn}
 - tapOn:
     text: ${output.login.phoneNumberfield}
 - inputText: ${output.login.phoneNumber}
 - tapOn:
     text: ${output.login.passWordfield}
 - runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
-- inputText: ${output.login.valuePassword}
+- inputText: ${output.login.password}
 - hideKeyboard
+- runScript: /Users/earchamrong/samples/android/user-app/food/login.js
 - assertVisible:
     text: ${output.login.loginBtn}
     index: 1
