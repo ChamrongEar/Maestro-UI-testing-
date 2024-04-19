@@ -5,15 +5,49 @@ appId: com.nham24.nham24driver_dev
 #-----------------------------------------------------------------------------------------------
 # Login 
 #-----------------------------------------------------------------------------------------------
-- runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+# - runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+# - tapOn:
+#     text: ${output.login.phoneNumberfield}
+# - runScript: /Users/earchamrong/samples/android/driver-app/express/login.js
+# - inputText: ${output.login.phoneNumber}
+# - runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+# - tapOn:
+#     text: ${output.login.passWordfield}
+# - inputText: ${output.login.password}
+# - hideKeyboard
+# - tapOn:
+#     text: ${output.login.loginBtn}
+
+#-----------------------------------------------------------------------------------------------
+# Booking express with 1 drop off
+#-----------------------------------------------------------------------------------------------
+- runScript: /Users/earchamrong/samples/android/driver-app/food/taxi-food.js
+- extendedWaitUntil:
+    visible: ${output.taxiFood.acceptBtn}
+    timeout: 10000 
 - tapOn:
-    text: ${output.login.phoneNumberfield}
-- runScript: /Users/earchamrong/samples/android/driver-app/express/login.js
-- inputText: ${output.login.phoneNumber}
-- runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+    text: ${output.taxiFood.acceptBtn} 
+- runScript: /Users/earchamrong/samples/android/driver-app/express/taxi-express.js
+- assertVisible:
+    text: ${output.taxiExpress.receivingItem}
+- swipe:
+    start: 15%, 92%
+    end: 90%, 92%
+    duration: 2000
+- assertVisible:
+    text: ${output.taxiExpress.startDropoff}
+- swipe:
+    start: 15%, 92%
+    end: 90%, 92%
+    duration: 2000
+- assertVisible:
+    text: ${output.taxiExpress.deliveryItem}
+- swipe:
+    start: 15%, 92%
+    end: 90%, 92%
+    duration: 2000
 - tapOn:
-    text: ${output.login.passWordfield}
-- inputText: ${output.login.password}
-- hideKeyboard
+    point: "72%,54%"                              # point for pixel 6
+- runScript: /Users/earchamrong/samples/android/driver-app/food/taxi-food.js
 - tapOn:
-    text: ${output.login.loginBtn}
+    text: ${output.taxiFood.submitBtn} 
