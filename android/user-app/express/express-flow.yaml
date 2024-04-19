@@ -1,12 +1,11 @@
 appId: com.nham24.nham24_dev
 ---
-- launchApp
-- runScript: /Users/earchamrong/samples/android/express/booking-express.js
+# - launchApp
+- runScript: /Users/earchamrong/samples/android/user-app/express/booking-express.js
 
 #----------------------------------------------------------------------------
 # recipient pay with cash collection COD
 #----------------------------------------------------------------------------
-
 - tapOn:
     text: ${output.bookingexpress.service}
 - tapOn:
@@ -38,7 +37,6 @@ appId: com.nham24.nham24_dev
     enabled: true
 - tapOn:
     text: ${output.bookingexpress.nextBtn}
-
 - assertVisible:
     text: ${output.bookingexpress.requestorderBtn}
     enabled: true
@@ -50,7 +48,6 @@ appId: com.nham24.nham24_dev
 #----------------------------------------------------------------------------
 # sender pay with cash collection COD
 #----------------------------------------------------------------------------
-
 # - tapOn:
 #     text: ${output.bookingexpress.service}
 # - tapOn:
