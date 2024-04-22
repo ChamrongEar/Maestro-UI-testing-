@@ -5,12 +5,12 @@ appId: com.nham24.nham24driver_dev
 #---------------------------------------------------------------------------------------------
 # Log in
 #---------------------------------------------------------------------------------------------
-- runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+- runScript: /Users/earchamrong/samples/android/driver-app/food/login-taxi-food.js
 - tapOn:
     text: ${output.login.phoneNumberfield}
-- runScript: /Users/earchamrong/samples/android/driver-app/taxi/login.js
+- runScript: /Users/earchamrong/samples/android/driver-app/taxi/login-taxi.js
 - inputText: ${output.login.phoneNumber}
-- runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
+- runScript: /Users/earchamrong/samples/android/driver-app/food/login-taxi-food.js
 - tapOn:
     text: ${output.login.passWordfield}
 - inputText: ${output.login.password}
