@@ -2,7 +2,7 @@ appId: com.nham24.nham24_dev
 ---
 # - launchApp
 
-- runScript: /Users/earchamrong/samples/android/user-app/login.js
+- runScript: /Users/earchamrong/samples/android/user-app/login-user/login-user.js
 - tapOn:
     text: ${output.login.loginBtn}
 - tapOn:
@@ -13,7 +13,7 @@ appId: com.nham24.nham24_dev
 - runScript: /Users/earchamrong/samples/android/driver-app/food/login.js
 - inputText: ${output.login.password}
 - hideKeyboard
-- runScript: /Users/earchamrong/samples/android/user-app/login.js
+- runScript: /Users/earchamrong/samples/android/user-app/login-user/login-user.js
 - assertVisible:
     text: ${output.login.loginBtn}
     index: 1
