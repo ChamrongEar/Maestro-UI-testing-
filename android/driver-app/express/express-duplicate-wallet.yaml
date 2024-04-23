@@ -1,0 +1,12 @@
+appId: com.nham24.nham24driver_dev
+---
+- launchApp
+- tapOn: ""
+- tapOn: ""
+- runScript: /Users/earchamrong/samples/android/driver-app/express/taxi-express.js
+- tapOn:
+    text: ${output.taxiExpress.wallet}
+- tapOn:
+    text: ${output.taxiExpress.viewTransaction}
+- swipe:              # This command swipes from the middle of the device to bottom device. 
+    direction: DOWN
