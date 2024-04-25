@@ -1,6 +1,7 @@
 appId: com.nham24.nham24_dev
 ---
 - launchApp
+
 - runScript: /Users/earchamrong/samples/android/user-app/express/booking-express.js
 - tapOn:
     text: ${output.bookingexpress.service}
