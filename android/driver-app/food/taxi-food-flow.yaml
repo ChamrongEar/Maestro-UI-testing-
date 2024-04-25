@@ -50,6 +50,6 @@ appId: com.nham24.nham24driver_dev
 - tapOn:
     text: ${output.taxiFood.okBtn}
 - tapOn:
-    point: "72%,57%"
+    point: "72%,61%"                                # point for pixel 4 XL
 - tapOn:
     text: ${output.taxiFood.submitBtn}  

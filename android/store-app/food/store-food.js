@@ -36,10 +36,17 @@ output.addnewcategory = {
     nameCategoryfield: "Enter menu category name",
     nameCategory: "New category",
 }
-
-
 output.disableoptionItem = {
     editBtn: "",
-    deletebtn: "",
-    updatebtn: "Update",
+    deleteBtn: "",
+    updateBtn: "Update",
+}
+output.editStock = {
+    enableStockBtn: "",
+    qtyField: "",
+    qty: "",
+    minstockalertField: "",
+    minstockalert: "",
+    recommendBtn: "",
+    activeBtn: "",
 }

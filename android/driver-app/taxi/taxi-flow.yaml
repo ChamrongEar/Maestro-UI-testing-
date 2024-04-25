@@ -5,18 +5,18 @@ appId: com.nham24.nham24driver_dev
 #---------------------------------------------------------------------------------------------
 # Log in
 #---------------------------------------------------------------------------------------------
-- runScript: /Users/earchamrong/samples/android/driver-app/food/login-taxi-food.js
-- tapOn:
-    text: ${output.login.phoneNumberfield}
-- runScript: /Users/earchamrong/samples/android/driver-app/taxi/login-taxi.js
-- inputText: ${output.login.phoneNumber}
-- runScript: /Users/earchamrong/samples/android/driver-app/food/login-taxi-food.js
-- tapOn:
-    text: ${output.login.passWordfield}
-- inputText: ${output.login.password}
-- hideKeyboard
-- tapOn:
-    text: ${output.login.loginBtn}
+# - runScript: /Users/earchamrong/samples/android/driver-app/food/login-taxi-food.js
+# - tapOn:
+#     text: ${output.login.phoneNumberfield}
+# - runScript: /Users/earchamrong/samples/android/driver-app/taxi/login-taxi.js
+# - inputText: ${output.login.phoneNumber}
+# - runScript: /Users/earchamrong/samples/android/driver-app/food/login-taxi-food.js
+# - tapOn:
+#     text: ${output.login.passWordfield}
+# - inputText: ${output.login.password}
+# - hideKeyboard
+# - tapOn:
+#     text: ${output.login.loginBtn}
 
 #---------------------------------------------------------------------------------------------
 # Process taxi destination later with cash
@@ -24,7 +24,7 @@ appId: com.nham24.nham24driver_dev
 - runScript: /Users/earchamrong/samples/android/driver-app/food/taxi-food.js
 - extendedWaitUntil:
     visible: ${output.taxiFood.acceptBtn}
-    timeout: 10000
+    timeout: 5000
 - tapOn:
     text: ${output.taxiFood.acceptBtn}
 - runScript: /Users/earchamrong/samples/android/driver-app/taxi/taxi.js

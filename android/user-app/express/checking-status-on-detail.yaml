@@ -1,0 +1,12 @@
+appId: com.nham24.nham24_dev
+---
+- launchApp
+
+- runScript: /Users/earchamrong/samples/android/user-app/express/booking-express.js
+- tapOn:
+    text: ${output.bookingexpress.service}
+- tapOn:
+    point: "92%,6%"                    # point for history
+- tapOn:
+    point: "50%,22%"
+    
