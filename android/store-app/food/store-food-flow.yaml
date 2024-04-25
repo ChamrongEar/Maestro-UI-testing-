@@ -23,8 +23,9 @@ appId: com.nham24.nham24store_dev
 #     index: 1
 
 #----------------------------------------------------------------------------------
-# - Create new item on store app
+# - Create new item on store app with add 2 price and 2 options
 #----------------------------------------------------------------------------------
+- startRecording: Create new item from store app
 - runScript: /Users/earchamrong/samples/android/store-app/food/store-food.js
 - tapOn:
     text: ${output.createItem.menuTap}
@@ -124,6 +125,7 @@ appId: com.nham24.nham24store_dev
     text: ${output.createItem.saveBtn}
 - tapOn:
     text: ${output.createItem.okBtn}
+- stopRecording
 
 
 # #----------------------------------------------------------------------------------
@@ -141,16 +143,17 @@ appId: com.nham24.nham24store_dev
 # - tapOn:
 #     point: "83%,85%"              # point active for pixel 4 XL
 # - tapOn:
-#     text: ${output.disableoptionItem.deletebtn}
+#     text: ${output.disableoptionItem.deleteBtn}
 #     index: 1
 # - assertVisible:
-#     text: ${output.disableoptionItem.updatebtn}
+#     text: ${output.disableoptionItem.updateBtn}
 #     enabled: true
 # -  tapOn:
-#     text: ${output.disableoptionItem.updatebtn}
+#     text: ${output.disableoptionItem.updateBtn}
 # - tapOn:
 #     text: ${output.createItem.okBtn}
   
+
 # #----------------------------------------------------------------------------------
 # # -  Create category on store app
 # #---------------------------------------------------------------------------------- 
@@ -158,8 +161,7 @@ appId: com.nham24.nham24store_dev
 # - tapOn:
 #     text: ${output.createItem.menuTap}
 # - tapOn:
-#     text: ${output.disableoptionItem.editBtn}
-#     index: 0
+#     text: ${output.createItem.addBtn}
 # - tapOn:
 #     text: ${output.addnewcategory.addcategoryBtn}
 # - tapOn:
@@ -171,8 +173,28 @@ appId: com.nham24.nham24store_dev
 # -  tapOn:
 #     text: ${output.createItem.okBtn}
 
-
-
+#----------------------------------------------------------------------------------
+# -  Edit stock item on store app
+#---------------------------------------------------------------------------------- 
+- runScript: /Users/earchamrong/samples/android/store-app/food/store-food.js
+- tapOn:
+    text: ${output.createItem.menuTap}
+- tapOn:
+    text: ${output.disableoptionItem.editBtn}
+    index: 0
+- scroll
+- tapOn:
+    text: ${output.editStock.enableStockBtn}
+- tapOn:
+    text: ${output.editStock.qtyField}
+- inputText: ${output.editStock.qty}
+- tapOn:
+    text: ${output.editStock.minstockalertField}
+- inputText: ${output.editStock.minstockalert}
+- tapOn:
+    text: ${output.editStock.recommendBtn}
+- tapOn:
+    text: ${output.editStock.activeBtn}
 
 
 

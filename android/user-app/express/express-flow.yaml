@@ -6,48 +6,6 @@ appId: com.nham24.nham24_dev
 #----------------------------------------------------------------------------
 # recipient pay with cash collection COD
 #----------------------------------------------------------------------------
-- tapOn:
-    text: ${output.bookingexpress.service}
-- tapOn:
-    text: ${output.bookingexpress.vehicle}
-- tapOn:
-    text: ${output.bookingexpress.saverecipient}
-- tapOn:
-    text: ${output.bookingexpress.parceltype}
-- tapOn:
-    text: ${output.bookingexpress.choosetype}
-- tapOn:
-    text: ${output.bookingexpress.confirmBtn}
-- tapOn:
-    text: ${output.bookingexpress.deliverTo}
-- scroll
-- tapOn:
-    text: ${output.bookingexpress.recipient_pay}
-- tapOn:
-    point: "84%,78%"
-- scroll
-- tapOn:
-    text: ${output.bookingexpress.inputcashcollection}
-- inputText: "25"
-- hideKeyboard
-- doubleTapOn:
-    text: ${output.bookingexpress.confirmBtn}
-- assertVisible:
-    text: ${output.bookingexpress.nextBtn}
-    enabled: true
-- tapOn:
-    text: ${output.bookingexpress.nextBtn}
-- assertVisible:
-    text: ${output.bookingexpress.requestorderBtn}
-    enabled: true
-- tapOn:
-    text: ${output.bookingexpress.requestorderBtn}
-- tapOn:
-    text: ${output.bookingexpress.viewtrackingBtn}
-
-#----------------------------------------------------------------------------
-# sender pay with cash collection COD
-#----------------------------------------------------------------------------
 # - tapOn:
 #     text: ${output.bookingexpress.service}
 # - tapOn:
@@ -64,25 +22,73 @@ appId: com.nham24.nham24_dev
 #     text: ${output.bookingexpress.deliverTo}
 # - scroll
 # - tapOn:
+#     text: ${output.bookingexpress.recipient_pay}
+# - tapOn:
 #     point: "84%,78%"
 # - scroll
 # - tapOn:
-#     text: ${output.bookingexpress.inputcashcollection}
-# - inputText: "25"
+#     text: ${output.bookingexpress.inputcashcollectionfield}
+# - inputText: ${output.bookingexpress.cashcollection}
 # - hideKeyboard
 # - doubleTapOn:
 #     text: ${output.bookingexpress.confirmBtn}
 # - assertVisible:
-#     text: ${output.bookingexpress.proceedtopaybtn}
+#     text: ${output.bookingexpress.nextBtn}
 #     enabled: true
 # - tapOn:
-#     text: ${output.bookingexpress.proceedtopaybtn}
-# - tapOn:
-#     text: ${output.bookingexpress.cashondelivery}
+#     text: ${output.bookingexpress.nextBtn}
 # - assertVisible:
-#     text: ${output.bookingexpress.proceedtopaybtn2}
+#     text: ${output.bookingexpress.requestorderBtn}
 #     enabled: true
 # - tapOn:
-#     text: ${output.bookingexpress.proceedtopaybtn2}
+#     text: ${output.bookingexpress.requestorderBtn}
 # - tapOn:
 #     text: ${output.bookingexpress.viewtrackingBtn}
+
+#----------------------------------------------------------------------------
+# sender pay with cash collection COD
+#----------------------------------------------------------------------------
+- tapOn:
+    text: ${output.bookingexpress.service}
+- tapOn:
+    text: ${output.bookingexpress.vehicle}
+- tapOn:
+    text: ${output.bookingexpress.saverecipient}
+- tapOn:
+    text: ${output.bookingexpress.parceltype}
+- tapOn:
+    text: ${output.bookingexpress.choosetype}
+- tapOn:
+    text: ${output.bookingexpress.confirmBtn}
+- tapOn:
+    text: ${output.bookingexpress.deliverTo}
+- scroll
+- tapOn:
+    point: "84%,78%"
+- scroll
+- tapOn:
+    text: ${output.bookingexpress.inputcashcollectionfield}
+- inputText: ${output.bookingexpress.cashcollection}
+- hideKeyboard
+- doubleTapOn:
+    text: ${output.bookingexpress.confirmBtn}
+- assertVisible:
+    text: ${output.bookingexpress.proceedtopaybtn}
+    enabled: true
+- tapOn:
+    text: ${output.bookingexpress.proceedtopaybtn}
+- tapOn:
+    text: ${output.bookingexpress.cashondelivery}
+- assertVisible:
+    text: ${output.bookingexpress.proceedtopaybtn2}
+    enabled: true
+- tapOn:
+    text: ${output.bookingexpress.proceedtopaybtn2}
+- assertVisible:
+    text: ${output.bookingexpress.viewtrackingBtn}
+    enabled: true
+- tapOn:
+    text: ${output.bookingexpress.viewtrackingBtn}
+- tapOn:
+    point: "95%,7%"           # point for detail btn pixel 4 XL
+- pressKey: home
