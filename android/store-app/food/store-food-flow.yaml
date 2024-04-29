@@ -5,127 +5,128 @@ appId: com.nham24.nham24store_dev
 #----------------------------------------------------------------------------------
 # - log in store app
 #----------------------------------------------------------------------------------
-# - runScript: /Users/earchamrong/samples/android/store-app/food/login-food.js
-# - tapOn:
-#     text: ${output.loginFood.loginBtn}
-# - tapOn:
-#     text: ${output.loginFood.phoneNumberfield}
-# - inputText: ${output.loginFood.phoneNumber}
-# - tapOn:
-#     text: ${output.loginFood.passwordfield}
-# - inputText: ${output.loginFood.password}
-# - hideKeyboard
-# - assertVisible:
-#     text: ${output.loginFood.loginBtn}
-#     enabled: true
-# - tapOn:
-#     text: ${output.loginFood.loginBtn}
-#     index: 1
+- runScript: /Users/earchamrong/samples/android/store-app/food/login-food.js
+- tapOn:
+    text: ${output.loginFood.loginBtn}
+- tapOn:
+    text: ${output.loginFood.phoneNumberfield}
+- inputText: ${output.loginFood.phoneNumber}
+- tapOn:
+    text: ${output.loginFood.passwordfield}
+- inputText: ${output.loginFood.password}
+- hideKeyboard
+- assertVisible:
+    text: ${output.loginFood.loginBtn}
+    index: 1
+    enabled: true
+- tapOn:
+    text: ${output.loginFood.loginBtn}
+    index: 1
 
 #----------------------------------------------------------------------------------
 # - Create new item on store app with add 2 price and 2 options
 #----------------------------------------------------------------------------------
-- startRecording: Create new item from store app
-- runScript: /Users/earchamrong/samples/android/store-app/food/store-food.js
-- tapOn:
-    text: ${output.createItem.menuTap}
-- tapOn:
-    text: ${output.createItem.addBtn}
-- tapOn:
-    text: ${output.createItem.chooseCategory}
-- tapOn:
-    text: ${output.createItem.selectCategory}
-- tapOn:
-    text: ${output.createItem.namefield}
-- inputText: ${output.createItem.name}
-- tapOn:
-    text: ${output.createItem.priceTab}
-- tapOn:
-    text: ${output.createItem.priceNamefield}
-- inputText: ${output.createItem.priceName}
-- tapOn:
-    text: ${output.createItem.priceUSDfield}
-- inputText: ${output.createItem.price}
-- hideKeyboard
-- tapOn:
-    text: ${output.createItem.addmorePrice}
-- tapOn:
-    text: ${output.createItem.priceNamefield}
-    index: 1
-- inputText: ${output.createItem.priceName1}
-- tapOn:
-    text: ${output.createItem.priceUSDfield}
-    index: 1
-- inputText: ${output.createItem.price1}
-- tapOn:
-    text: ${output.createItem.optionTab}
-- tapOn:
-    text: ${output.createItem.addOption}
-- tapOn:
-    text: ${output.createItem.optionNamefield}
-- inputText: ${output.createItem.optionName}
-# required Option
-- tapOn:
-    point: "88%,53%"        # point for pixel 4XL
-- tapOn:
-    text: ${output.createItem.addfield}
-    index: 0
-- tapOn:
-    text: ${output.createItem.addfieldNamefield}
-- inputText: ${output.createItem.addfieldName}
-- tapOn:
-    text: ${output.createItem.addfieldNamepricefield}
-# delete 0 from price
-- tapOn:
-    id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
-    index: 14
-- inputText: ${output.createItem.addfieldNameprice}
-- hideKeyboard
-- tapOn:
-    text: ${output.createItem.addfield}
-    index: 1
-- tapOn:
-    text: ${output.createItem.optionNamefield}
-- inputText: ${output.createItem.optionName1}
-- hideKeyboard
-# required option 2
-- tapOn:
-    point: "88%,73%"
-- tapOn:
-    text: ${output.createItem.addfield}
-    index: 0
-- scroll
-- tapOn:
-    text: ${output.createItem.addfieldNamefield}
-    index: 0
-- inputText: ${output.createItem.addfieldName1}
-- tapOn:
-    text: ${output.createItem.addfieldNamepricefield}
-    index: 0
-# delete 0 from price
-- tapOn:
-    id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
-    index: 14
-- inputText: ${output.createItem.addfieldNameprice1}
-- hideKeyboard
-- tapOn:
-    text: ${output.createItem.addgalleryBtn}
-    index: 1
-- tapOn:
-    text: ${output.createItem.gallery}
-#   choose pic in gallery
-- tapOn:
-    id: "com.google.android.providers.media.module:id/icon_thumbnail"
-    index: 5
-- hideKeyboard
-- assertVisible:
-    text: ${output.createItem.saveBtn}
-    enabled: true
-- tapOn:
-    text: ${output.createItem.saveBtn}
-- tapOn:
-    text: ${output.createItem.okBtn}
-- stopRecording
+# # - startRecording: Create new item from store app
+# - runScript: /Users/earchamrong/samples/android/store-app/food/store-food.js
+# - tapOn:
+#     text: ${output.createItem.menuTap}
+# - tapOn:
+#     text: ${output.createItem.addBtn}
+# - tapOn:
+#     text: ${output.createItem.chooseCategory}
+# - tapOn:
+#     text: ${output.createItem.selectCategory}
+# - tapOn:
+#     text: ${output.createItem.namefield}
+# - inputText: ${output.createItem.name}
+# - tapOn:
+#     text: ${output.createItem.priceTab}
+# - tapOn:
+#     text: ${output.createItem.priceNamefield}
+# - inputText: ${output.createItem.priceName}
+# - tapOn:
+#     text: ${output.createItem.priceUSDfield}
+# - inputText: ${output.createItem.price}
+# - hideKeyboard
+# - tapOn:
+#     text: ${output.createItem.addmorePrice}
+# - tapOn:
+#     text: ${output.createItem.priceNamefield}
+#     index: 1
+# - inputText: ${output.createItem.priceName1}
+# - tapOn:
+#     text: ${output.createItem.priceUSDfield}
+#     index: 1
+# - inputText: ${output.createItem.price1}
+# - tapOn:
+#     text: ${output.createItem.optionTab}
+# - tapOn:
+#     text: ${output.createItem.addOption}
+# - tapOn:
+#     text: ${output.createItem.optionNamefield}
+# - inputText: ${output.createItem.optionName}
+# # required Option
+# - tapOn:
+#     point: "88%,53%"        # point for pixel 4XL
+# - tapOn:
+#     text: ${output.createItem.addfield}
+#     index: 0
+# - tapOn:
+#     text: ${output.createItem.addfieldNamefield}
+# - inputText: ${output.createItem.addfieldName}
+# - tapOn:
+#     text: ${output.createItem.addfieldNamepricefield}
+# # delete 0 from price
+# - tapOn:
+#     id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
+#     index: 14
+# - inputText: ${output.createItem.addfieldNameprice}
+# - hideKeyboard
+# - tapOn:
+#     text: ${output.createItem.addfield}
+#     index: 1
+# - tapOn:
+#     text: ${output.createItem.optionNamefield}
+# - inputText: ${output.createItem.optionName1}
+# - hideKeyboard
+# # required option 2
+# - tapOn:
+#     point: "88%,73%"
+# - tapOn:
+#     text: ${output.createItem.addfield}
+#     index: 0
+# - scroll
+# - tapOn:
+#     text: ${output.createItem.addfieldNamefield}
+#     index: 0
+# - inputText: ${output.createItem.addfieldName1}
+# - tapOn:
+#     text: ${output.createItem.addfieldNamepricefield}
+#     index: 0
+# # delete 0 from price
+# - tapOn:
+#     id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
+#     index: 14
+# - inputText: ${output.createItem.addfieldNameprice1}
+# - hideKeyboard
+# - tapOn:
+#     text: ${output.createItem.addgalleryBtn}
+#     index: 1
+# - tapOn:
+#     text: ${output.createItem.gallery}
+# #   choose pic in gallery
+# - tapOn:
+#     id: "com.google.android.providers.media.module:id/icon_thumbnail"
+#     index: 5
+# - hideKeyboard
+# - assertVisible:
+#     text: ${output.createItem.saveBtn}
+#     enabled: true
+# - tapOn:
+#     text: ${output.createItem.saveBtn}
+# - tapOn:
+#     text: ${output.createItem.okBtn}
+# # - stopRecording
 
 
 # #----------------------------------------------------------------------------------
@@ -176,25 +177,25 @@ appId: com.nham24.nham24store_dev
 #----------------------------------------------------------------------------------
 # -  Edit stock item on store app
 #---------------------------------------------------------------------------------- 
-- runScript: /Users/earchamrong/samples/android/store-app/food/store-food.js
-- tapOn:
-    text: ${output.createItem.menuTap}
-- tapOn:
-    text: ${output.disableoptionItem.editBtn}
-    index: 0
-- scroll
-- tapOn:
-    text: ${output.editStock.enableStockBtn}
-- tapOn:
-    text: ${output.editStock.qtyField}
-- inputText: ${output.editStock.qty}
-- tapOn:
-    text: ${output.editStock.minstockalertField}
-- inputText: ${output.editStock.minstockalert}
-- tapOn:
-    text: ${output.editStock.recommendBtn}
-- tapOn:
-    text: ${output.editStock.activeBtn}
+# - runScript: /Users/earchamrong/samples/android/store-app/food/store-food.js
+# - tapOn:
+#     text: ${output.createItem.menuTap}
+# - tapOn:
+#     text: ${output.disableoptionItem.editBtn}
+#     index: 0
+# - scroll
+# - tapOn:
+#     text: ${output.editStock.enableStockBtn}
+# - tapOn:
+#     text: ${output.editStock.qtyField}
+# - inputText: ${output.editStock.qty}
+# - tapOn:
+#     text: ${output.editStock.minstockalertField}
+# - inputText: ${output.editStock.minstockalert}
+# - tapOn:
+#     text: ${output.editStock.recommendBtn}
+# - tapOn:
+#     text: ${output.editStock.activeBtn}
 
 
 

@@ -27,13 +27,13 @@ appId: com.nham24.nham24driver_dev
     text: ${output.taxiFood.acceptBtn}      
 - assertVisible:
     text: ${output.taxiFood.arrivestore}
-- swipe:
+- swipe:                # swipe right
     start: 15%, 92%
     end: 90%, 92%
     duration: 2000
 - assertVisible:
     text: ${output.taxiFood.receivingitem}
-- swipe:
+- swipe:                # swipe right
     start: 15%, 92%
     end: 90%, 92%
     duration: 2000
@@ -43,13 +43,13 @@ appId: com.nham24.nham24driver_dev
     text: ${output.taxiFood.notiftarriveBtn}
 - assertVisible:
     text: ${output.taxiFood.completeorder}
-- swipe:
+- swipe:                # swipe right for point pixel 4 XL
     start: 15%, 92%
     end: 90%, 92%
     duration: 2000
 - tapOn:
     text: ${output.taxiFood.okBtn}
 - tapOn:
-    point: "72%,61%"                                # point for pixel 4 XL
+    point: "72%,61%"    # point for pixel 4 XL
 - tapOn:
     text: ${output.taxiFood.submitBtn}  
