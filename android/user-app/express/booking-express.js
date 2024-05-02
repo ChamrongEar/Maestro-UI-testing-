@@ -15,6 +15,28 @@ output.bookingexpress= {
     wallet: "Wallet Balance $67.29",
     requestorderBtn: "Request Order",
     proceedtopaybtn2: "Proceed to Pay $ 0.78",
+    proceedtopaybtn3: "Proceed to Pay $ 1.37",
     viewtrackingBtn: "View Tracking",
+    delivertoBtn: "Deliver to",
+    selectLocation: "Select Location",
+    chooselocation: "Eden Garden Mall",
+
+
     // orderHistory: "1 Eden Garden, Boeung Kak Road, Boeung Kak Community, Khan Daun Penh, Phnom Penh, 120306, Cambodia AATest • 011 111 111 25 Apr 2024 $0.78",
+}
+output.createaddressWithphonenubmer = {
+    myAccount: "MY ACCOUNT",
+    myAdress: "My Addresses",
+    addnewAddress: "Add New Address",
+    pinAddress: "󰍏",
+    recipientnameField: "Name *",
+    recipientName: "Halamadrid",
+    inputaddress: "Norton university",
+    chooseAddress: "Norton University",
+    phonenumberField: "Phone number",
+    phoneNumber: "965874323",
+    createBtn: "CREATE NOW",
+    homeTap: "HOME",
+    yourLocation: "YOUR LOCATION",
+    currentLocation: "Use Current Location"
 }
