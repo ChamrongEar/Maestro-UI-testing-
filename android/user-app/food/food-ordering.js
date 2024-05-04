@@ -4,7 +4,7 @@ output.foodordering = {
   item: "2. Hot Americano / អាមេរិកកាណូ",
   add_to_card: "Add To Cart  | $ 1.38",
   choose_sugar: ", Sugar 0% + $0",
-  add_to_card2: "Add To Cart  | $ 1.38",
+  addtoCard: "Add To Cart  | $ 0.97",
   order_nowBtn: "ORDER NOW",
   otherLocation: " Other locations ",
   currentLocation: "Use Current Location",
