@@ -1,6 +1,6 @@
 appId: com.nham24.nham24_dev
 ---
-- launchApp
+# - launchApp
 
 #----------------------------------------------------------------------
 # - order food using new user with current location
@@ -77,18 +77,25 @@ appId: com.nham24.nham24_dev
     text: ${output.foodordering.proceed_to_payBtn}
 - scrollUntilVisible:
     element:
-      text: ${output.foodordering.wallet} # or any other selector
+      text: ${output.foodordering.cash_on_delivery} # or any other selector
     direction: DOWN
 # - tapOn:
 #     text: ${output.foodordering.cash_on_delivery}
 - tapOn:
-    text: ${output.foodordering.wallet}
+    text: ${output.foodordering.cash_on_delivery}
 - assertVisible:
     text: ${output.foodordering.place_the_order_nowBtn}
     enabled: true
 - tapOn:
     text: ${output.foodordering.place_the_order_nowBtn}
     repeat: 5
+    delay: 10
+# - repeat:
+#     times: 5
+#     commands:
+#       - tapOn:
+#             text: ${output.foodordering.place_the_order_nowBtn}
+#       - scroll
 
 #-------------------------------------------------------------
 # RE-ORDER

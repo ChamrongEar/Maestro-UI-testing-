@@ -5,4 +5,6 @@ output.taxi = {
     endTripBtn: "End Trip",
     collectBtn: "Collect",
     okBtn: "OK",
+    online: "Online",
+    // reCenter: "Re-center"
 }
