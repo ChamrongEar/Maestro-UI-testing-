@@ -24,7 +24,7 @@ appId: com.nham24.nham24driver_dev
     visible: ${output.taxiFood.acceptBtn}
     timeout: 5000      # Timeout in milliseconds
 - tapOn:
-    text: ${output.taxiFood.acceptBtn}      
+    text: ${output.taxiFood.acceptBtn}
 - assertVisible:
     text: ${output.taxiFood.arrivestore}
 - swipe:                # swipe right

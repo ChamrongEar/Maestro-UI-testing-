@@ -5,53 +5,6 @@ appId: com.nham24.nham24_dev
 #----------------------------------------------------------------------
 # - order food using new user with current location
 #----------------------------------------------------------------------
-- runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
-- tapOn:
-    text: ${output.foodordering.food}
-- scroll
-- tapOn:
-    text: ${output.foodordering.shop}
-- tapOn:
-    text: ${output.foodordering.item}
-- tapOn:
-    text: ${output.foodordering.add_to_card}
-- tapOn:
-    text: ${output.foodordering.choose_sugar}
-- tapOn:
-    text: ${output.foodordering.add_to_card2}
-- tapOn:
-    text: ${output.foodordering.order_nowBtn}
-- tapOn:
-    text: ${output.foodordering.otherLocation}
-- tapOn:
-    text: ${output.foodordering.currentLocation}
-- assertVisible:
-    text: ${output.foodordering.proceed_to_payBtn}
-    enabled: true
-- tapOn:
-    text: ${output.foodordering.proceed_to_payBtn}
-- tapOn:
-    text: ${output.foodordering.cash_on_delivery}
-- assertVisible:
-    text: ${output.foodordering.place_the_order_nowBtn}
-    enabled: true
-- tapOn:
-    text: ${output.foodordering.place_the_order_nowBtn}
-
-
-#----------------------------------------------------------------------
-# - just prepare element discount and price DC
-#----------------------------------------------------------------------
-# # assert discount = - $ 0.69
-# - copyTextFrom: ${output.foodordering.discount}
-# - evalScript: ${output.foodordering.discount = maestro.copiedText}
-# - copyTextFrom: ${output.foodordering.priceDC}
-# - assertTrue: ${output.foodordering.priceDC == maestro.copiedText}
-# - evalScript: ${console.log(maestro.copiedText)}
-
-#----------------------------------------------------------------------
-# - order food using 010383629 user
-#----------------------------------------------------------------------
 # - runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
 # - tapOn:
 #     text: ${output.foodordering.food}
@@ -69,25 +22,80 @@ appId: com.nham24.nham24_dev
 # - tapOn:
 #     text: ${output.foodordering.order_nowBtn}
 # - tapOn:
-#     text: ${output.foodordering.select_address}
+#     text: ${output.foodordering.otherLocation}
+# - tapOn:
+#     text: ${output.foodordering.currentLocation}
 # - assertVisible:
 #     text: ${output.foodordering.proceed_to_payBtn}
 #     enabled: true
 # - tapOn:
 #     text: ${output.foodordering.proceed_to_payBtn}
-# - scrollUntilVisible:
-#     element:
-#       text: ${output.foodordering.wallet} # or any other selector
-#     direction: DOWN
-# # - tapOn:
-# #     text: ${output.foodordering.cash_on_delivery}
 # - tapOn:
-#     text: ${output.foodordering.wallet}
+#     text: ${output.foodordering.cash_on_delivery}
 # - assertVisible:
 #     text: ${output.foodordering.place_the_order_nowBtn}
 #     enabled: true
 # - tapOn:
 #     text: ${output.foodordering.place_the_order_nowBtn}
+
+
+#----------------------------------------------------------------------
+# - just prepare element discount and price DC
+#----------------------------------------------------------------------
+# # assert discount = - $ 0.69
+# - copyTextFrom: ${output.foodordering.discount}
+# - evalScript: ${output.foodordering.discount = maestro.copiedText}
+# - copyTextFrom: ${output.foodordering.priceDC}
+# - assertTrue: ${output.foodordering.priceDC == maestro.copiedText}
+# - evalScript: ${console.log(maestro.copiedText)}
+
+#----------------------------------------------------------------------
+# - order food using 010383629 user
+#----------------------------------------------------------------------
+- runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
+- tapOn:
+    text: ${output.foodordering.food}
+- scroll
+- tapOn:
+    text: ${output.foodordering.shop}
+- tapOn:
+    text: ${output.foodordering.item}
+- tapOn:
+    text: ${output.foodordering.addtoCard}
+- tapOn:
+    text: ${output.foodordering.choose_sugar}
+- tapOn:
+    text: ${output.foodordering.addtoCard}
+- tapOn:
+    text: ${output.foodordering.order_nowBtn}
+- tapOn:
+    text: ${output.foodordering.select_address}
+- assertVisible:
+    text: ${output.foodordering.proceed_to_payBtn}
+    enabled: true
+- tapOn:
+    text: ${output.foodordering.proceed_to_payBtn}
+- scrollUntilVisible:
+    element:
+      text: ${output.foodordering.cash_on_delivery} # or any other selector
+    direction: DOWN
+# - tapOn:
+#     text: ${output.foodordering.cash_on_delivery}
+- tapOn:
+    text: ${output.foodordering.cash_on_delivery}
+- assertVisible:
+    text: ${output.foodordering.place_the_order_nowBtn}
+    enabled: true
+- tapOn:
+    text: ${output.foodordering.place_the_order_nowBtn}
+    repeat: 5
+    delay: 10
+# - repeat:
+#     times: 5
+#     commands:
+#       - tapOn:
+#             text: ${output.foodordering.place_the_order_nowBtn}
+#       - scroll
 
 #-------------------------------------------------------------
 # RE-ORDER

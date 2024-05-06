@@ -14,8 +14,8 @@ output.bookingexpress= {
     cashondelivery: "Cash on Delivery",
     wallet: "Wallet Balance $67.29",
     requestorderBtn: "Request Order",
-    proceedtopaybtn2: "Proceed to Pay $ 0.78",
-    proceedtopaybtn3: "Proceed to Pay $ 1.37",
+    proceedtopaybtn2: "Proceed to Pay $ 0.78",       // It is price from office to eden
+    proceedtopaybtn3: "Proceed to Pay $ 1.37",       // It is price from office to norton
     viewtrackingBtn: "View Tracking",
     delivertoBtn: "Deliver to",
     selectLocation: "Select Location",

@@ -21,6 +21,53 @@ appId: com.nham24.nham24driver_dev
 #---------------------------------------------------------------------------------------------
 # Process taxi destination later with cash
 #---------------------------------------------------------------------------------------------
+# - runScript: /Users/earchamrong/samples/android/driver-app/food/taxi-food.js
+# - extendedWaitUntil:
+#     visible: ${output.taxiFood.acceptBtn}
+#     timeout: 5000
+# - tapOn:
+#     text: ${output.taxiFood.acceptBtn}
+# - tapOn:
+#     point: "92%,78%"       # point for click on map pixel 4XL
+# - pressKey: back
+# - pressKey: back
+# - runScript: /Users/earchamrong/samples/android/driver-app/taxi/taxi.js
+# - assertVisible:
+#     text: ${output.taxi.arrive}
+# - swipe:
+#     start: 15%, 90%
+#     end: 90%, 90%
+#     duration: 2000
+# - assertVisible:
+#     text: ${output.taxi.startTrip}
+# - swipe:
+#     start: 15%, 90%
+#     end: 90%, 90%
+#     duration: 2000
+# - assertVisible:
+#     text: ${output.taxi.onGoingTrip}
+# - swipe:
+#     start: 15%, 90%
+#     end: 90%, 90%
+#     duration: 2000
+# - assertVisible:
+#     text: ${output.taxi.endTripBtn}
+# - tapOn:
+#     text: ${output.taxi.endTripBtn}
+# - tapOn:
+#     text: ${output.taxi.collectBtn}
+# - assertVisible:
+#     text: ${output.taxi.okBtn}
+# - tapOn:
+#     text: ${output.taxi.okBtn}
+# - assertVisible:
+#     text: ${output.taxi.online}
+#     enabled: true
+
+
+#---------------------------------------------------------------------------------------------
+# Process taxi have destination with cash
+#---------------------------------------------------------------------------------------------
 - runScript: /Users/earchamrong/samples/android/driver-app/food/taxi-food.js
 - extendedWaitUntil:
     visible: ${output.taxiFood.acceptBtn}
@@ -52,5 +99,10 @@ appId: com.nham24.nham24driver_dev
     text: ${output.taxi.endTripBtn}
 - tapOn:
     text: ${output.taxi.collectBtn}
+- assertVisible:
+    text: ${output.taxi.okBtn}
 - tapOn:
     text: ${output.taxi.okBtn}
+- assertVisible:
+    text: ${output.taxi.online}
+    enabled: true

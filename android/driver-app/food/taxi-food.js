@@ -8,4 +8,6 @@ output.taxiFood = {
     completeorder: "Swipe right to complete",
     okBtn: "OK",
     submitBtn: "Submit",
+    // openMap: "Open Map",
+    // reCenter: "Re-center",
 }
