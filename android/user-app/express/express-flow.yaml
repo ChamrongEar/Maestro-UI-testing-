@@ -97,53 +97,85 @@ appId: com.nham24.nham24_dev
 # Case error selecting contact address with country code
 #----------------------------------------------------------------------------
 # - startRecording: error selecting contact address with country code
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.myAccount}
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.myAdress}
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.addnewAddress}
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.pinAddress}
-- inputText:  ${output.createaddressWithphonenubmer.inputaddress}
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.chooseAddress}
-    index: 1
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.phonenumberField}
-- inputText:  ${output.createaddressWithphonenubmer.phoneNumber}
-- hideKeyboard
-- assertVisible:
-    text: ${output.createaddressWithphonenubmer.createBtn}
-    enabled: true
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.createBtn}
-- pressKey: back
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.homeTap}
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.yourLocation}
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.currentLocation}
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.myAccount}
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.myAdress}
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.addnewAddress}
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.pinAddress}
+# - inputText:  ${output.createaddressWithphonenubmer.inputaddress}
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.chooseAddress}
+#     index: 1
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.phonenumberField}
+# - inputText:  ${output.createaddressWithphonenubmer.phoneNumber}
+# - hideKeyboard
+# - assertVisible:
+#     text: ${output.createaddressWithphonenubmer.createBtn}
+#     enabled: true
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.createBtn}
+# - pressKey: back
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.homeTap}
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.yourLocation}
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.currentLocation}
+# - tapOn:
+#     text: ${output.bookingexpress.service}
+# - tapOn:
+#     text: ${output.bookingexpress.vehicle}
+# - tapOn:
+#     text: ${output.bookingexpress.delivertoBtn}
+# - tapOn:
+#     text: ${output.bookingexpress.selectLocation}
+# - scrollUntilVisible:
+#     element:
+#       text: ${output.createaddressWithphonenubmer.chooseAddress} # or any other selector
+#     direction: DOWN
+#     timeout: 50000
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.chooseAddress}
+# - tapOn:
+#     text: ${output.createaddressWithphonenubmer.recipientnameField}
+# - inputText: ${output.createaddressWithphonenubmer.recipientName}
+# - hideKeyboard
+# - tapOn:
+#     text: ${output.bookingexpress.parceltype}
+# - tapOn:
+#     text: ${output.bookingexpress.choosetype}
+# - assertVisible:
+#     text: ${output.bookingexpress.confirmBtn}
+#     enabled: true
+# - tapOn:
+#     text: ${output.bookingexpress.confirmBtn}
+# - assertVisible:
+#     text: ${output.bookingexpress.proceedtopaybtn}
+#     enabled: true
+# - tapOn:
+#     text: ${output.bookingexpress.proceedtopaybtn}
+# - tapOn:
+#     text: ${output.bookingexpress.cashondelivery}
+# - assertVisible:
+#     text: ${output.bookingexpress.proceedtopaybtn3}
+#     enabled: true
+# - tapOn:
+#     text: ${output.bookingexpress.proceedtopaybtn3}
+# - stopRecording
+
+#-----------------------------------------------------------------------------------------------------------------------
+# Case booking express with user have only first or last name (Not have both) pay with CASH "Error payment rejected"
+#-----------------------------------------------------------------------------------------------------------------------
 - tapOn:
     text: ${output.bookingexpress.service}
 - tapOn:
     text: ${output.bookingexpress.vehicle}
 - tapOn:
-    text: ${output.bookingexpress.delivertoBtn}
-- tapOn:
-    text: ${output.bookingexpress.selectLocation}
-- scrollUntilVisible:
-    element:
-      text: ${output.createaddressWithphonenubmer.chooseAddress} # or any other selector
-    direction: DOWN
-    timeout: 50000
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.chooseAddress}
-- tapOn:
-    text: ${output.createaddressWithphonenubmer.recipientnameField}
-- inputText: ${output.createaddressWithphonenubmer.recipientName}
-- hideKeyboard
+    text: ${output.bookingexpress.saverecipient}
 - tapOn:
     text: ${output.bookingexpress.parceltype}
 - tapOn:
@@ -153,16 +185,12 @@ appId: com.nham24.nham24_dev
     enabled: true
 - tapOn:
     text: ${output.bookingexpress.confirmBtn}
-- assertVisible:
-    text: ${output.bookingexpress.proceedtopaybtn}
-    enabled: true
 - tapOn:
     text: ${output.bookingexpress.proceedtopaybtn}
 - tapOn:
     text: ${output.bookingexpress.cashondelivery}
 - assertVisible:
-    text: ${output.bookingexpress.proceedtopaybtn3}
+    text: ${output.bookingexpress.proceedtopaybtn2}
     enabled: true
 - tapOn:
-    text: ${output.bookingexpress.proceedtopaybtn3}
-# - stopRecording
+    text: ${output.bookingexpress.proceedtopaybtn2}
