@@ -49,15 +49,15 @@ appId: com.nham24.nham24driver_dev
 - assertVisible:
     text: ${output.taxiExpress.feedback}
 - tapOn:
-    point: "72%,54%"                              # point for pixel 6
+    point: "72%,57%"                              # point for pixel 4 XL
 - runScript: /Users/earchamrong/samples/android/driver-app/food/taxi-food.js
 - tapOn:
     text: ${output.taxiFood.submitBtn}
-- tapOn: ""
-- tapOn: ""
-- runScript: /Users/earchamrong/samples/android/driver-app/express/taxi-express.js
-- tapOn:
-    text: ${output.taxiExpress.wallet}
-- tapOn:
-    text: ${output.taxiExpress.viewTransaction}
-- pressKey: home
+# - tapOn: ""
+# - tapOn: ""
+# - runScript: /Users/earchamrong/samples/android/driver-app/express/taxi-express.js
+# - tapOn:
+#     text: ${output.taxiExpress.wallet}
+# - tapOn:
+#     text: ${output.taxiExpress.viewTransaction}
+# - pressKey: home
