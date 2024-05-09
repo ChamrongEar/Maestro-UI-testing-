@@ -34,7 +34,7 @@ output.createaddressWithphonenubmer = {
     inputaddress: "Norton university",
     chooseAddress: "Norton University",
     phonenumberField: "Phone number",
-    phoneNumber: "965874323",
+    phoneNumber: "965445677",
     createBtn: "CREATE NOW",
     homeTap: "HOME",
     yourLocation: "YOUR LOCATION",

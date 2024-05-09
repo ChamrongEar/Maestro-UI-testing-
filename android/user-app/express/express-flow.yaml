@@ -93,9 +93,9 @@ appId: com.nham24.nham24_dev
 #     point: "95%,7%"           # point for detail btn pixel 4 XL
 # - pressKey: home
 
-#----------------------------------------------------------------------------
-# Case error selecting contact address with country code
-#----------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------
+# Case error selecting contact address with country code, create new address with booking with that address
+#------------------------------------------------------------------------------------------------------------
 # - startRecording: error selecting contact address with country code
 # - tapOn:
 #     text: ${output.createaddressWithphonenubmer.myAccount}
@@ -169,6 +169,7 @@ appId: com.nham24.nham24_dev
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Case booking express with user have only first or last name (Not have both) pay with CASH "Error payment rejected"
+# Check user profile before booking 
 #-----------------------------------------------------------------------------------------------------------------------
 - tapOn:
     text: ${output.bookingexpress.service}
