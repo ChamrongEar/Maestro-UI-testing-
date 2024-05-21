@@ -1,6 +1,6 @@
 appId: com.nham24.nham24_dev
 ---
-# - launchApp
+- launchApp
 
 #----------------------------------------------------------------------
 # - order food using new user with current location
@@ -52,44 +52,44 @@ appId: com.nham24.nham24_dev
 #----------------------------------------------------------------------
 # - order food using 010383629 user
 #----------------------------------------------------------------------
-- runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
-- tapOn:
-    text: ${output.foodordering.food}
-- scroll
-- tapOn:
-    text: ${output.foodordering.shop}
-- tapOn:
-    text: ${output.foodordering.item}
-- tapOn:
-    text: ${output.foodordering.addtoCard}
-- tapOn:
-    text: ${output.foodordering.choose_sugar}
-- tapOn:
-    text: ${output.foodordering.addtoCard}
-- tapOn:
-    text: ${output.foodordering.order_nowBtn}
-- tapOn:
-    text: ${output.foodordering.select_address}
-- assertVisible:
-    text: ${output.foodordering.proceed_to_payBtn}
-    enabled: true
-- tapOn:
-    text: ${output.foodordering.proceed_to_payBtn}
-- scrollUntilVisible:
-    element:
-      text: ${output.foodordering.cash_on_delivery} # or any other selector
-    direction: DOWN
+# - runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
+# - tapOn:
+#     text: ${output.foodordering.food}
+# - scroll
+# - tapOn:
+#     text: ${output.foodordering.shop}
+# - tapOn:
+#     text: ${output.foodordering.item}
+# - tapOn:
+#     text: ${output.foodordering.addtoCard}
+# - tapOn:
+#     text: ${output.foodordering.choose_sugar}
+# - tapOn:
+#     text: ${output.foodordering.addtoCard}
+# - tapOn:
+#     text: ${output.foodordering.order_nowBtn}
+# - tapOn:
+#     text: ${output.foodordering.select_address}
+# - assertVisible:
+#     text: ${output.foodordering.proceed_to_payBtn}
+#     enabled: true
+# - tapOn:
+#     text: ${output.foodordering.proceed_to_payBtn}
+# - scrollUntilVisible:
+#     element:
+#       text: ${output.foodordering.cash_on_delivery} # or any other selector
+#     direction: DOWN
+# # - tapOn:
+# #     text: ${output.foodordering.cash_on_delivery}
 # - tapOn:
 #     text: ${output.foodordering.cash_on_delivery}
-- tapOn:
-    text: ${output.foodordering.cash_on_delivery}
-- assertVisible:
-    text: ${output.foodordering.place_the_order_nowBtn}
-    enabled: true
-- tapOn:
-    text: ${output.foodordering.place_the_order_nowBtn}
-    repeat: 5
-    delay: 10
+# - assertVisible:
+#     text: ${output.foodordering.place_the_order_nowBtn}
+#     enabled: true
+# - tapOn:
+#     text: ${output.foodordering.place_the_order_nowBtn}
+#     repeat: 5
+#     delay: 10
 # - repeat:
 #     times: 5
 #     commands:
@@ -132,3 +132,30 @@ appId: com.nham24.nham24_dev
 #     enabled: true
 # - tapOn:
 #     text: ${output.foodordering.place_the_order_nowBtn}
+
+
+#-------------------------------------------------------------
+# Search item name
+#-------------------------------------------------------------
+- runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
+- tapOn:
+    text: ${output.searchitem.searchTap}
+- tapOn:
+    text: ${output.searchitem.searchBar}
+    index: 0
+- inputText: ${output.searchitem.inputText}
+# Tap on search Btn on keyboard (pixel 4XL)
+- tapOn:
+    id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
+    index: 58
+#-----------------------------------------
+- tapOn:
+    text: ${output.searchitem.store}
+- tapOn: ""              # Search Btn Item
+- inputText: ${output.searchitem.inputItem}
+- hideKeyboard
+- scrollUntilVisible:
+    element: 
+      text: ${output.searchitem.item}
+    direction: DOWN
+    timeout: 50000

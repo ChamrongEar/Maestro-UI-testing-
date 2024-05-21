@@ -17,3 +17,12 @@ output.foodordering = {
   // priceDC: "- $ 0.69",
   // priceST: "$ 1.38",
 };
+output.searchitem = {
+  searchTap: "SEARCH",
+  searchBar: "Search for stores",
+  inputText: "koi",
+  store: "KOI Thé Preah Norodom",
+  inputItem: "Milk tea",
+  item: "Green Milk Tea (S)",
+
+}
