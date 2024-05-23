@@ -23,6 +23,9 @@ output.searchitem = {
   inputText: "koi",
   store: "KOI Thé Preah Norodom",
   inputItem: "Milk tea",
-  item: "Green Milk Tea (S)",
-
+  item: "Milk Tea (S)",
+  inputStore: "Pizza company",
+  chooseStore: "The Pizza Company Sorya",
+  nameItem: "Ham &",
+  scrollItem: "Ham & Crab Pan",
 }

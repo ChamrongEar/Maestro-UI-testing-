@@ -134,28 +134,52 @@ appId: com.nham24.nham24_dev
 #     text: ${output.foodordering.place_the_order_nowBtn}
 
 
-#-------------------------------------------------------------
-# Search item name
-#-------------------------------------------------------------
+#--------------------------------------------------------------------------
+# Search item name "Store KOI Thé Preah Norodom" search item (Milk Tea (S))
+#--------------------------------------------------------------------------
+# - runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
+# - tapOn:
+#     text: ${output.searchitem.searchTap}
+# - tapOn:
+#     text: ${output.searchitem.searchBar}
+#     index: 0
+# - inputText: ${output.searchitem.inputText}
+# # Tap on search Btn on keyboard (pixel 4XL)
+# - tapOn:
+#     id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
+#     index: 58
+# #-----------------------------------------
+# - tapOn:
+#     text: ${output.searchitem.store}
+# - tapOn: ""              # Search Btn Item
+# - inputText: ${output.searchitem.inputItem}
+# - hideKeyboard
+# - scrollUntilVisible:
+#     element: 
+#       text: ${output.searchitem.item}
+#     direction: DOWN
+#     timeout: 50000
+
+#-------------------------------------------------------------------------------
+# Search item name "Store The Pizza Company Sorya" search item (Ham & Crab Pan)
+#-------------------------------------------------------------------------------
 - runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
 - tapOn:
     text: ${output.searchitem.searchTap}
 - tapOn:
     text: ${output.searchitem.searchBar}
     index: 0
-- inputText: ${output.searchitem.inputText}
+- inputText: ${output.searchitem.inputStore}
 # Tap on search Btn on keyboard (pixel 4XL)
 - tapOn:
     id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
     index: 58
 #-----------------------------------------
 - tapOn:
-    text: ${output.searchitem.store}
+    text: ${output.searchitem.chooseStore}
 - tapOn: ""              # Search Btn Item
-- inputText: ${output.searchitem.inputItem}
+- inputText: ${output.searchitem.nameItem}
 - hideKeyboard
-- scrollUntilVisible:
-    element: 
-      text: ${output.searchitem.item}
-    direction: DOWN
-    timeout: 50000
+- assertVisible:
+    text: ${output.foodordering.scrollItem}
+    enabled: true
