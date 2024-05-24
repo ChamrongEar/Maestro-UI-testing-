@@ -1,0 +1,53 @@
+appId: com.nham24.nham24_dev
+---
+# - launchApp
+
+- runScript: /Users/earchamrong/samples/android/user-app/cloud/cloud-order.js
+- tapOn:
+    text: ${output.central.service}
+- scrollUntilVisible:
+    element: 
+      text: ${output.central.cloud}
+    direction: DOWN
+    timeout: 7000
+- tapOn:
+    text: ${output.central.cloud}
+- tapOn:
+    text: ""                    # add btn item
+    index: 1
+- tapOn:
+    text: ${output.central.addtocardBtn}
+- swipe:
+    direction: LEFT
+    duration: 10000     # Values are in ms.
+- tapOn:
+    text: ""  
+- tapOn:
+    text: ${output.central.addtocardBtn1}
+- swipe:
+    direction: LEFT
+    duration: 10000     # Values are in ms.
+- tapOn:
+    text: ""                    # add btn item
+    index: 1
+- tapOn:
+    text: ""                    # add btn item
+    index: 2
+- tapOn:
+    text: ${output.central.orderBtn}
+- tapOn:
+    text: ${output.central.address}
+- assertVisible: ${output.central.proceedtopayBtn}
+- tapOn:
+    text: ${output.central.proceedtopayBtn}
+- scrollUntilVisible:
+    element: 
+      text: ${output.central.cashondelivery}
+    direction: DOWN
+    timeout: 5000
+- tapOn:
+    text: ${output.central.cashondelivery}
+- assertVisible: ${output.central.placeorderBtn}
+- tapOn:
+    text: ${output.central.placeorderBtn}
+
