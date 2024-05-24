@@ -29,3 +29,6 @@ output.searchitem = {
   nameItem: "Ham &",
   scrollItem: "Ham & Crab Pan",
 }
+output.userAddress = {
+  other: "OTHER"
+}

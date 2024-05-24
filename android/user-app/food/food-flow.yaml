@@ -1,6 +1,6 @@
 appId: com.nham24.nham24_dev
 ---
-- launchApp
+# - launchApp
 
 #----------------------------------------------------------------------
 # - order food using new user with current location
@@ -134,9 +134,9 @@ appId: com.nham24.nham24_dev
 #     text: ${output.foodordering.place_the_order_nowBtn}
 
 
-#--------------------------------------------------------------------------
+#----------------------------------------------------------------------------
 # Search item name "Store KOI Thé Preah Norodom" search item (Milk Tea (S))
-#--------------------------------------------------------------------------
+#----------------------------------------------------------------------------
 # - runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
 # - tapOn:
 #     text: ${output.searchitem.searchTap}
@@ -163,23 +163,67 @@ appId: com.nham24.nham24_dev
 #-------------------------------------------------------------------------------
 # Search item name "Store The Pizza Company Sorya" search item (Ham & Crab Pan)
 #-------------------------------------------------------------------------------
+# - runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
+# - tapOn:
+#     text: ${output.searchitem.searchTap}
+# - tapOn:
+#     text: ${output.searchitem.searchBar}
+#     index: 0
+# - inputText: ${output.searchitem.inputStore}
+# # Tap on search Btn on keyboard (pixel 4XL)
+# - tapOn:
+#     id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
+#     index: 58
+# #-----------------------------------------
+# - tapOn:
+#     text: ${output.searchitem.chooseStore}
+# - tapOn: ""              # Search Btn Item
+# - inputText: ${output.searchitem.nameItem}
+# - hideKeyboard
+# - assertVisible:
+#     text: ${output.foodordering.scrollItem}
+#     enabled: true
+
+#-------------------------------------------------------------------------------
+# Create user address
+#-------------------------------------------------------------------------------
+- runScript: /Users/earchamrong/samples/android/user-app/express/booking-express.js
+- tapOn:
+    text: ${output.createaddressWithphonenubmer.myAccount}
+- assertVisible: ${output.createaddressWithphonenubmer.myAdress}
+- tapOn:
+    text: ${output.createaddressWithphonenubmer.myAdress}
+- tapOn:
+    text: ${output.createaddressWithphonenubmer.addnewAddress}
+- swipe:
+    direction: LEFT
+    duration: 25000     # Values are in ms.
+- swipe:
+    direction: UP
+    duration: 10000
+- swipe:
+    direction: LEFT
+    duration: 25000     # Values are in ms.
+- swipe:                # swipe up
+    start: 50%, 92%
+    end: 90%, 92%
+- tapOn:
+    text: ${output.createaddressWithphonenubmer.phonenumberField}
+- inputText: ${output.createaddressWithphonenubmer.phoneNumber}
+- hideKeyboard
 - runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
 - tapOn:
-    text: ${output.searchitem.searchTap}
+    text: ${output.userAddress.other}
+    index: 1
+- runScript: /Users/earchamrong/samples/android/user-app/express/booking-express.js
+- assertVisible: ${output.createaddressWithphonenubmer.createBtn}
 - tapOn:
-    text: ${output.searchitem.searchBar}
-    index: 0
-- inputText: ${output.searchitem.inputStore}
-# Tap on search Btn on keyboard (pixel 4XL)
-- tapOn:
-    id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
-    index: 58
-#-----------------------------------------
-- tapOn:
-    text: ${output.searchitem.chooseStore}
-- tapOn: ""              # Search Btn Item
-- inputText: ${output.searchitem.nameItem}
-- hideKeyboard
-- assertVisible:
-    text: ${output.foodordering.scrollItem}
-    enabled: true
+    text: ${output.createaddressWithphonenubmer.createBtn}
+# - runScript: /Users/earchamrong/samples/android/user-app/food/food-ordering.js
+- scrollUntilVisible:
+    element: 
+      text: ${output.createaddressWithphonenubmer.phoneNumber}
+    direction: DOWN
+    timeout: 50000
+
+
