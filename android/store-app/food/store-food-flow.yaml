@@ -5,23 +5,23 @@ appId: com.nham24.nham24store_dev
 #----------------------------------------------------------------------------------
 # - log in store app
 #----------------------------------------------------------------------------------
-- runScript: /Users/earchamrong/samples/android/store-app/food/login-food.js
-- tapOn:
-    text: ${output.loginFood.loginBtn}
-- tapOn:
-    text: ${output.loginFood.phoneNumberfield}
-- inputText: ${output.loginFood.phoneNumber}
-- tapOn:
-    text: ${output.loginFood.passwordfield}
-- inputText: ${output.loginFood.password}
-- hideKeyboard
-- assertVisible:
-    text: ${output.loginFood.loginBtn}
-    index: 1
-    enabled: true
-- tapOn:
-    text: ${output.loginFood.loginBtn}
-    index: 1
+# - runScript: /Users/earchamrong/samples/android/store-app/food/login-food.js
+# - tapOn:
+#     text: ${output.loginFood.loginBtn}
+# - tapOn:
+#     text: ${output.loginFood.phoneNumberfield}
+# - inputText: ${output.loginFood.phoneNumber}
+# - tapOn:
+#     text: ${output.loginFood.passwordfield}
+# - inputText: ${output.loginFood.password}
+# - hideKeyboard
+# - assertVisible:
+#     text: ${output.loginFood.loginBtn}
+#     index: 1
+#     enabled: true
+# - tapOn:
+#     text: ${output.loginFood.loginBtn}
+#     index: 1
 
 #----------------------------------------------------------------------------------
 # - Create new item on store app with add 2 price and 2 options
@@ -198,6 +198,36 @@ appId: com.nham24.nham24store_dev
 #     text: ${output.editStock.activeBtn}
 
 
+# #----------------------------------------------------------------------------------
+# # - Delete option on item
+# #----------------------------------------------------------------------------------
+- runScript: /Users/earchamrong/samples/android/store-app/food/store-food.js
+- tapOn:
+    text: ${output.createItem.menuTap}
+- tapOn:
+    text: ""
+    index: 3
+- tapOn:
+    text: ${output.createItem.optionTab}
+- scroll
+- assertVisible: ${output.createItem.carrot}
+- tapOn:
+    point: "83%,58%"
+- tapOn:
+    text: ""
+    index: 1
+- assertVisible: ${output.disableoptionItem.updateBtn}
+-  tapOn:
+    text: ${output.disableoptionItem.updateBtn}
+- tapOn:
+    text: ${output.createItem.okBtn}
+- tapOn:
+    text: ""
+    index: 3
+- tapOn:
+    text: ${output.createItem.optionTab}
+- scroll
+- assertNotVisible: ${output.createItem.carrot}
 
 
 
