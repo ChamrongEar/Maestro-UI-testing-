@@ -29,7 +29,8 @@ output.createItem = {
     addgalleryBtn: "",
     gallery: "Gallery",
     saveBtn: "Save",
-    okBtn: "OK"
+    okBtn: "OK",
+    carrot: "Carrot"
 }
 output.addnewcategory = {
     addcategoryBtn: "",
