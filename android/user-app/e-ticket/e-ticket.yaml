@@ -1,0 +1,36 @@
+appId: com.nham24.nham24_dev
+---
+# - launchApp
+
+- runScript: /Users/earchamrong/samples/android/user-app/e-ticket/e-ticket.js
+- tapOn:
+    text: ${output.eticket.service}
+- tapOn:
+    text: ${output.eticket.store}
+- tapOn:
+    text: ""
+    index: 0
+- tapOn:
+    text: ""
+    index: 1
+- assertVisible: ${output.eticket.orderBtn}
+- tapOn:
+    text: ${output.eticket.orderBtn}
+- assertVisible: ${output.eticket.proceedtopayBtn}
+- tapOn:
+    text: ${output.eticket.proceedtopayBtn}
+- scrollUntilVisible:
+    element:
+      text: ${output.eticket.wallet}
+    direction: DOWN
+    timeout: 50000
+- tapOn:
+    text: ${output.eticket.wallet}
+- assertVisible: ${output.eticket.placeorderBtn}
+- tapOn:
+    text: ${output.eticket.placeorderBtn}
+- tapOn: ""
+- tapOn:
+    text: ${output.eticket.eticketTap}
+- tapOn:
+    point: "50%,29%"
