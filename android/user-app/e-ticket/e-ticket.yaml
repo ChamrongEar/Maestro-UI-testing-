@@ -7,10 +7,10 @@ appId: com.nham24.nham24_dev
     text: ${output.eticket.service}
 - tapOn:
     text: ${output.eticket.store}
-- tapOn:
+- tapOn:                                     # Add Btn order
     text: ""
     index: 0
-- tapOn:
+- tapOn:                                     # Add Btn order
     text: ""
     index: 1
 - assertVisible: ${output.eticket.orderBtn}
@@ -29,8 +29,9 @@ appId: com.nham24.nham24_dev
 - assertVisible: ${output.eticket.placeorderBtn}
 - tapOn:
     text: ${output.eticket.placeorderBtn}
-- tapOn: ""
+- tapOn: ""                                  # Back Btn
+- assertVisible: ${output.eticket.eticketTap}
 - tapOn:
     text: ${output.eticket.eticketTap}
-- tapOn:
+- tapOn:                                      # point the 1st first order history on e-ticket history
     point: "50%,29%"
