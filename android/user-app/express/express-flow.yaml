@@ -4,6 +4,32 @@ appId: com.nham24.nham24_dev
 - runScript: /Users/earchamrong/samples/android/user-app/express/booking-express.js
 
 #----------------------------------------------------------------------------
+# Booing express flow
+#----------------------------------------------------------------------------
+- tapOn:
+    text: ${output.bookingexpress.service}
+- tapOn:
+    text: ${output.bookingexpress.address}
+- tapOn:
+    point: "52%,42%"
+- tapOn:
+    text: ${output.bookingexpress.choosetype}
+- assertVisible: ${output.bookingexpress.confirmBtn}
+- tapOn:
+    text: ${output.bookingexpress.confirmBtn}
+- assertVisible: ${output.bookingexpress.proceedtopaybtn}
+- tapOn:
+    text: ${output.bookingexpress.proceedtopaybtn}
+- tapOn:
+    text: ${output.bookingexpress.cashondelivery}
+- assertVisible: ${output.bookingexpress.proceedtopaybtn4}
+- tapOn:
+    text: ${output.bookingexpress.proceedtopaybtn4}
+- assertVisible: ${output.bookingexpress.viewtrackingBtn}
+- tapOn:
+    text: ${output.bookingexpress.viewtrackingBtn}
+
+#----------------------------------------------------------------------------
 # recipient pay with cash collection COD
 #----------------------------------------------------------------------------
 # - tapOn:
@@ -171,27 +197,27 @@ appId: com.nham24.nham24_dev
 # Case booking express with user have only first or last name (Not have both) pay with CASH "Error payment rejected"
 # Check user profile before booking 
 #-----------------------------------------------------------------------------------------------------------------------
-- tapOn:
-    text: ${output.bookingexpress.service}
-- tapOn:
-    text: ${output.bookingexpress.vehicle}
-- tapOn:
-    text: ${output.bookingexpress.saverecipient}
-- tapOn:
-    text: ${output.bookingexpress.parceltype}
-- tapOn:
-    text: ${output.bookingexpress.choosetype}
-- assertVisible:
-    text: ${output.bookingexpress.confirmBtn}
-    enabled: true
-- tapOn:
-    text: ${output.bookingexpress.confirmBtn}
-- tapOn:
-    text: ${output.bookingexpress.proceedtopaybtn}
-- tapOn:
-    text: ${output.bookingexpress.cashondelivery}
-- assertVisible:
-    text: ${output.bookingexpress.proceedtopaybtn2}
-    enabled: true
-- tapOn:
-    text: ${output.bookingexpress.proceedtopaybtn2}
+# - tapOn:
+#     text: ${output.bookingexpress.service}
+# - tapOn:
+#     text: ${output.bookingexpress.vehicle}
+# - tapOn:
+#     text: ${output.bookingexpress.saverecipient}
+# - tapOn:
+#     text: ${output.bookingexpress.parceltype}
+# - tapOn:
+#     text: ${output.bookingexpress.choosetype}
+# - assertVisible:
+#     text: ${output.bookingexpress.confirmBtn}
+#     enabled: true
+# - tapOn:
+#     text: ${output.bookingexpress.confirmBtn}
+# - tapOn:
+#     text: ${output.bookingexpress.proceedtopaybtn}
+# - tapOn:
+#     text: ${output.bookingexpress.cashondelivery}
+# - assertVisible:
+#     text: ${output.bookingexpress.proceedtopaybtn2}
+#     enabled: true
+# - tapOn:
+#     text: ${output.bookingexpress.proceedtopaybtn2}
